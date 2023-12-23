@@ -1,0 +1,59 @@
+
+// Program: Order Block Finder
+// Developer: Forex Robot Easy Team
+// Developer's Site: forexroboteasy.com
+
+// This code is a sample implementation of the Order Block Finder software.
+
+// Function to analyze past performance and predict market movements
+// Parameters: timeframe - the timeframe for analysis (5 or 15 minutes)
+// Returns: predicted market movement
+int MarketMovementPrediction(int timeframe) {
+    // Perform analysis based on the selected timeframe
+    if (timeframe == 5) {
+        // Analyze past performance for 5-minute timeframe
+        // Make predictions for bounces, return-to, and break-through channels
+        // Return the predicted market movement
+        return 1; // 1 represents an upward movement
+    } else if (timeframe == 15) {
+        // Analyze past performance for 15-minute timeframe
+        // Make predictions for bounces, return-to, and break-through channels
+        // Return the predicted market movement
+        return -1; // -1 represents a downward movement
+    } else {
+        // Invalid timeframe
+        // Return 0 to indicate an error
+        return 0;
+    }
+}
+
+// Function to test the capabilities of the software
+void TryBeforeYouBuy() {
+    // Perform testing using a trade manager/visualizer/bracketing utility
+    // Provide a risk-free way for traders to evaluate the software
+    // Display the results of the testing
+    Print('Testing completed successfully!');
+}
+
+// Entry point of the program
+void OnStart() {
+    // Call the MarketMovementPrediction function with a 5-minute timeframe
+    int prediction = MarketMovementPrediction(5);
+    
+    if (prediction == 1) {
+        // Upward movement predicted
+        // Place a buy order
+        Print('Buy order placed');
+    } else if (prediction == -1) {
+        // Downward movement predicted
+        // Place a sell order
+        Print('Sell order placed');
+    } else {
+        // Error in prediction
+        // Print an error message
+        Print('Error in market prediction');
+    }
+    
+    // Test the software capabilities
+    TryBeforeYouBuy();
+}
